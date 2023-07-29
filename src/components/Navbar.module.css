@@ -1,0 +1,26 @@
+.headerprincipal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 15vh;
+    background-color: #323232;
+}
+
+
+.navbar,ul{
+    display: flex;
+    flex-direction: row;    
+    justify-content:space-around ;
+    align-items: center;
+}
+li{
+    margin-right: 10px;
+    list-style-type: none;
+    text-decoration:none;
+}
+.linkStyle {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+  }
