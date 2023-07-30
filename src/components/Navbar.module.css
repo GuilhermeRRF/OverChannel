@@ -1,26 +1,49 @@
 .headerprincipal{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100vw;
-    height: 15vh;
+    height: 13vh;
+    justify-content: space-around;
     background-color: #323232;
 }
+.titulo{
 
-
-.navbar,ul{
-    display: flex;
-    flex-direction: row;    
-    justify-content:space-around ;
-    align-items: center;
 }
+
+.navbar{
+       background-color: rgb(248, 248, 248);
+}
+
+ul{
+    display: flex;align-items: center;
+    flex-direction: row; 
+    margin-right: 100px;   
+}
+
+
 li{
-    margin-right: 10px;
+margin-right: 20px;
+    text-align: center;
     list-style-type: none;
     text-decoration:none;
 }
+
 .linkStyle {
     text-decoration: none;
     color: white;
     font-size: 16px;
+  }
+
+  .lupapesquisa{ 
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+  }
+
+  .pesquisa{
+   
+    width: 35px;
+    height: 35px;
   }
