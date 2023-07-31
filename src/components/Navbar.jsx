@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import lupaimages from "../imgs/lupa.jpg";
-import loginimages from "../imgs/login.jpg"
+import loginimages from "../imgs/login.jpg";
 
 function Navbar() {
   return (
@@ -30,22 +30,23 @@ function Navbar() {
               Mais Popular
             </Link>
           </li>
-          <div className={styles.lupapesquisa}>
-            <img
-              src={lupaimages}
-              alt="lupa de pesquisa"
-              className={styles.pesquisa}
-            />
+          <div class={styles.barraprincipal}>
+            <input class={styles.barra} type="text" placeholder="Digite Aqui...." />
+            <a href="##" class={styles.lupa}>
+            <i className={styles.lupaimages}>
+           <img className={styles.lupapesquisa} src={lupaimages} alt="Search" />
+      </i>
+            </a>
           </div>
         </ul>
       </nav>
 
       <div className={styles.usuario}>
-      <img
-              src={loginimages}
-              alt="lupa de pesquisa"
-              className={styles.pesquisa}
-            />
+        <img
+          src={loginimages}
+          alt="lupa de pesquisa"
+          className={styles.login}
+        />
       </div>
     </header>
   );
