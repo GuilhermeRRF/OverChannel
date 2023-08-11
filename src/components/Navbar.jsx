@@ -1,15 +1,32 @@
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import lupaimages from "../imgs/lupa.jpg";
-// import loginimages from "../imgs/login.jpg";
+import usuarioImg from '../imgs/login.jpg';
+import usuarioRemovebgImg from '../imgs/usuario.png';
+import configRemovebgImg from '../imgs/config.png';
+import outputRemovebgImg from '../imgs/Output.png';
 
 function Navbar() {
+  const toggleDropdown = () => {
+    var dropdown = document.getElementById(styles.myDropdown);
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
+    }
+  };
+
+  const menuToggle = () => {
+    const toggleMenu = document.querySelector(`.${styles.menu}`);
+    toggleMenu.classList.toggle(styles.active);
+  };
+
   return (
-  
+    
   <header>
       <nav>
 
-        <h1>OverChannel</h1>
+        <h1><Link className={styles.MenuLinkTitulo} to="/">OverChannel</Link></h1>
 
          {/*--menu--*/}
 
@@ -17,7 +34,7 @@ function Navbar() {
           <li className={styles.MenuItem}><Link className={styles.MenuLink} to="/">Inicio</Link></li>
           <div className={styles.dropdown}>
             <button  to="/genero" 
-              className={styles.dropbtn} id={styles.MenuLink} onClick={"toggleDropdown"}>
+              className={styles.dropbtn} id={styles.MenuLink} onClick={toggleDropdown}>
               Gênero
             </button>
             <div className={styles.DropdownContent} id={styles.myDropdown}>
@@ -97,20 +114,32 @@ function Navbar() {
                  
                  {/*--Login--*/}
         </ul>
-        {/* <div className={styles.action}>
-          <div className={styles.profile}onClick={menuToggle}>
-              <img src={styles.usuario.png}>
-          </div>
-          <div className={styles.menu}>
-              
-              <ul>
-                  <li><img className={styles.usuario-removebg-preview.png} width="20px"><a href="#">Meu Perfil</a></li>
-                  <li><img src={styles.config-removebg-preview.png} width="20px"><a href="#">Configuração</a></li>
-                  <li><img src={styles.Output-removebg-preview.png} width="20px"><a href="#">Logar</a></li>
-              </ul>
-          </div>
-      </div> */}
-
+        <div className={styles.action}>
+      <div className={styles.profile} onClick={menuToggle}>
+        {/* Use as variáveis de imagem importadas */}
+        <img src={usuarioImg} alt="Perfil" />
+      </div>
+      <div className={styles.menu}>
+        <ul>
+          {/* ... */}
+          <li>
+            {/* Use as variáveis de imagem importadas */}
+            <img src={usuarioRemovebgImg} alt="Meu Perfil" width="20px" />
+            <a href="#">Meu Perfil</a>
+          </li>
+          <li>
+            {/* Use as variáveis de imagem importadas */}
+            <img src={configRemovebgImg} alt="Configuração" width="20px" />
+            <a href="#">Configuração</a>
+          </li>
+          <li>
+            {/* Use as variáveis de imagem importadas */}
+            <img src={outputRemovebgImg} alt="Logar" width="20px" />
+            <a href="#">Logar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
         </nav>
       </header>
   );

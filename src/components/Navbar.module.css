@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,67 +8,69 @@
 
 /*header*/
 
-h1{
-position: absolute;
-left: 50px;
-font-size: 30px;
-color: white;
+h1,
+Link {
+  position: absolute;
+  left: 50px;
+  font-size: 30px;
+  color: white;
 }
 
-header{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-width: 100vw;
-height: 15vh;
-background-color: #323232;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  background-color: #323232;
 }
 
 /*menus superiores abaixo*/
 
 /*dar uma melhoarada aqui depois*/
-nav{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-width: 100vw;
-height: 10vh;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
 }
 
 /*dar uma melhoarada aqui depois*/
-.ulPrincipal{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-height: 10vh;
+.ulPrincipal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
 }
 
 /*links do menu*/
-.MenuLink{
-margin: 0px 10px;
-background-color: #323232;
-color: white;
-padding: 10px;
-text-decoration: none;
-}
-
-
-#MenuLink{
+.MenuLink {
   margin: 0px 10px;
   background-color: #323232;
   color: white;
   padding: 10px;
   text-decoration: none;
-  }
-  
+}
 
+#MenuLink {
+  margin: 0px 10px;
+  background-color: #323232;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
 
+.MenuLinkTitulo {
+  text-decoration: none;
+  font-size: 30px;
+}
 
-.MenuItem{
-list-style: none;
+.MenuItem {
+  list-style: none;
 }
 
 /*codigo do dropdwan abaixo*/
@@ -87,10 +89,10 @@ list-style: none;
 .DropdownContent {
   display: none;
   position: absolute;
-  top: 92px;
+  top: 100px;
   background-color: #1a1919;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -101,22 +103,22 @@ list-style: none;
   display: block;
 }
 
-p{
+p {
   font-size: 20px;
   text-align: center;
   padding-bottom: 20px;
   color: white;
 }
 
-.myDropdown{
+.myDropdown {
   width: 70vw;
   height: 50vh;
   background-color: rgb(193, 196, 29);
 }
 
-.ItemDropdown{
+.ItemDropdown {
   position: absolute;
-  left: -400px;
+  left: -467px;
   display: flex;
   justify-content: center;
   width: 80vw;
@@ -124,14 +126,13 @@ p{
   background-color: rgb(12, 12, 12);
 }
 
-.ListaDropdown{
+.ListaDropdown {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 40vw;
   height: 60vh;
   border: 2px solid rgb(32, 32, 32);
-
 }
 
 /* Change color on hover */
@@ -141,7 +142,7 @@ p{
 
 /*lupa de pesquisa*/
 
-.lupapesquisa{ 
+.lupapesquisa {
   display: flex;
   justify-content: center;
   width: 40px;
@@ -149,39 +150,42 @@ p{
   align-items: center;
 }
 
-.barraprincipal{
+.barraprincipal {
   position: absolute;
-  top : 4%;
-  left: 66%;
+  top: 4, 5%;
+  left: 65%;
   transform: translate(0%, 0%);
   background: #4a5050bb;
   height: 40px;
   border-radius: 40px;
   padding: 10px;
 }
-.barraprincipal:hover > input{
-  width:200px;/*tamanho da expansão da barra */
-  padding: 0 25px;/*para o placeholder dar um espaço da lupa */
-}
-.barra-box:hover > .lupa{
-  background:#536179;
+
+.barraprincipal:hover > input {
+  width: 200px; /*tamanho da expansão da barra */
+  padding: 0 25px; /*para o placeholder dar um espaço da lupa */
 }
 
-.barra{
-  width: 0;/*manter a barra redonda*/
+.barra-box:hover > .lupa {
+  background: #536179;
+}
+
+.barra {
+  width: 0; /*manter a barra redonda*/
   border: none;
   outline: none;
   padding: 0;
   background: none;
-  font-size: 1rem;/*font placeholder*/
+  font-size: 1rem; /*font placeholder*/
   transition: 0.5s ease;
-  line-height: 20px;/*altura placeholder*/
+  line-height: 20px; /*altura placeholder*/
   color: #fff;
 }
-.lupa{
-  float: left;/*manter a lupa lado esquerdo*/
+
+.lupa {
+  float: left; /*manter a lupa lado esquerdo*/
   width: 20px;
-  font-size:1.3rem;
+  font-size: 1.3rem;
   height: 20px;
   border-radius: 50%;
   display: flex;
@@ -190,24 +194,20 @@ p{
   transition: 0.4s;
   cursor: pointer;
   text-decoration: none;
-  
 }
 
-.usuario{
-width: 35px;
-height: 35px;
+.usuario {
+  width: 35px;
+  height: 35px;
 }
 
-
-.action
-{
+.action {
   position: fixed;
-  top: 25px;
+  top: 30px;
   right: 70px;
 }
 
-.action .profile
-{
+.action .profile {
   position: relative;
   width: 40px;
   height: 40px;
@@ -216,8 +216,7 @@ height: 35px;
   cursor: pointer;
 }
 
-.action .profile img
-{
+.action .profile img {
   position: absolute;
   top: 0;
   left: 0;
@@ -226,29 +225,27 @@ height: 35px;
   object-fit: cover;
 }
 
-.action .menu 
-{
+.action .menu {
   position: absolute;
   top: 120px;
-  right: -15px;
+  right: -18px;
   padding: 10px 20px;
   background: #323232;
   width: 200px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   transition: 0.5s;
   visibility: hidden;
   opacity: 0;
 }
 
-.action .menu.active
-{
+.action .menu.active {
   top: 80px;
   visibility: visible;
   opacity: 1;
 }
-.action .menu::before
-{
+
+.action .menu::before {
   content: "";
   position: absolute;
   top: -5px;
@@ -258,8 +255,8 @@ height: 35px;
   background: #323232;
   transform: rotate(45deg);
 }
-.action .menu h3
-{
+
+.action .menu h3 {
   width: 100%;
   text-align: center;
   font-size: 18px;
@@ -269,39 +266,32 @@ height: 35px;
   line-height: 1.2em;
 }
 
-
-.action .menu h3 span
-{
+.action .menu h3 span {
   font-size: 14px;
   color: #cecece;
   font-weight: 500;
 }
 
-.action .menu ul li 
-{
+.action .menu ul li {
   list-style: none;
-  padding: 10px 0; 
-  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
 }
 
-
-.action .menu ul li img 
-{
-  max-width: 20px !important; 
+.action .menu ul li img {
+  max-width: 20px !important;
   margin-right: 10px;
   opacity: 0.5;
   transition: 0.5s;
 }
 
-.action .menu ul li:hover img
-{
+.action .menu ul li:hover img {
   opacity: 1;
 }
 
-.action .menu ul li a 
-{
+.action .menu ul li a {
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
@@ -309,7 +299,9 @@ height: 35px;
   transition: 0.5s;
 }
 
-.action .menu ul li:hover a
-{
+.action .menu ul li:hover a {
   color: #fa5d02;
-} 
+}
+
+
+/*abaixo codigo responsivo*/
