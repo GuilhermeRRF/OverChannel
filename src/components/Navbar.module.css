@@ -1,90 +1,315 @@
-.headerprincipal{
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 13vh;
-    justify-content: space-around;
-    background-color: #323232;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Arial;
 }
 
-.navbar{
-       background-color: rgb(248, 248, 248);
+/*header*/
+
+h1{
+position: absolute;
+left: 50px;
+font-size: 30px;
+color: white;
 }
 
-ul{
-    display: flex;align-items: center;
-    flex-direction: row; 
-    margin-right: 100px;   
+header{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 15vh;
+background-color: #323232;
+}
+
+/*menus superiores abaixo*/
+
+/*dar uma melhoarada aqui depois*/
+nav{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 10vh;
+}
+
+/*dar uma melhoarada aqui depois*/
+.ulPrincipal{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+height: 10vh;
+}
+
+/*links do menu*/
+.MenuLink{
+margin: 0px 10px;
+background-color: #323232;
+color: white;
+padding: 10px;
+text-decoration: none;
 }
 
 
-li{
-margin-right: 20px;
-    text-align: center;
-    list-style-type: none;
-    text-decoration:none;
-}
-
-.linkStyle {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-  }
-
-  .lupapesquisa{ 
-    display: flex;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-  }
-
-  .barraprincipal{
-    position: absolute;
-    top : 3.4%;
-    left: 62%;
-    transform: translate(0%, 0%);
-    background: #4a5050bb;
-    height: 40px;
-    border-radius: 40px;
-    padding: 10px;
-  }
-  .barraprincipal:hover > input{
-    width:200px;/*tamanho da expansão da barra */
-    padding: 0 25px;/*para o placeholder dar um espaço da lupa */
-  }
-  .barra-box:hover > .lupa{
-    background:#536179;
-  }
-  
-  .barra{
-    width: 0;/*manter a barra redonda*/
-    border: none;
-    outline: none;
-    padding: 0;
-    background: none;
-    font-size: 1rem;/*font placeholder*/
-    transition: 0.5s ease;
-    line-height: 20px;/*altura placeholder*/
-    color: #fff;
-  }
-  .lupa{
-    float: left;/*manter a lupa lado esquerdo*/
-    width: 20px;
-    font-size:1.3rem;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    cursor: pointer;
-    text-decoration: none;
-    
+#MenuLink{
+  margin: 0px 10px;
+  background-color: #323232;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
   }
   
 
-.login{
-  width: 35px;
-  height: 35px;
+
+
+.MenuItem{
+list-style: none;
 }
+
+/*codigo do dropdwan abaixo*/
+
+/*botão do genero */
+.dropbtn {
+  background-color: #323232;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+/* dropdown  do genero */
+.DropdownContent {
+  display: none;
+  position: absolute;
+  top: 92px;
+  background-color: #1a1919;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.DropdownContent a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+p{
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.myDropdown{
+  width: 70vw;
+  height: 50vh;
+  background-color: rgb(193, 196, 29);
+}
+
+.ItemDropdown{
+  position: absolute;
+  left: -400px;
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  height: 60vh;
+  background-color: rgb(12, 12, 12);
+}
+
+.ListaDropdown{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  height: 60vh;
+  border: 2px solid rgb(32, 32, 32);
+
+}
+
+/* Change color on hover */
+.DropdownContent a:hover {
+  background-color: #2b2b2b;
+}
+
+/*lupa de pesquisa*/
+
+.lupapesquisa{ 
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+}
+
+.barraprincipal{
+  position: absolute;
+  top : 4%;
+  left: 66%;
+  transform: translate(0%, 0%);
+  background: #4a5050bb;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+.barraprincipal:hover > input{
+  width:200px;/*tamanho da expansão da barra */
+  padding: 0 25px;/*para o placeholder dar um espaço da lupa */
+}
+.barra-box:hover > .lupa{
+  background:#536179;
+}
+
+.barra{
+  width: 0;/*manter a barra redonda*/
+  border: none;
+  outline: none;
+  padding: 0;
+  background: none;
+  font-size: 1rem;/*font placeholder*/
+  transition: 0.5s ease;
+  line-height: 20px;/*altura placeholder*/
+  color: #fff;
+}
+.lupa{
+  float: left;/*manter a lupa lado esquerdo*/
+  width: 20px;
+  font-size:1.3rem;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.usuario{
+width: 35px;
+height: 35px;
+}
+
+
+.action
+{
+  position: fixed;
+  top: 25px;
+  right: 70px;
+}
+
+.action .profile
+{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.action .profile img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action .menu 
+{
+  position: absolute;
+  top: 120px;
+  right: -15px;
+  padding: 10px 20px;
+  background: #323232;
+  width: 200px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.action .menu.active
+{
+  top: 80px;
+  visibility: visible;
+  opacity: 1;
+}
+.action .menu::before
+{
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: #323232;
+  transform: rotate(45deg);
+}
+.action .menu h3
+{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.2em;
+}
+
+
+.action .menu h3 span
+{
+  font-size: 14px;
+  color: #cecece;
+  font-weight: 500;
+}
+
+.action .menu ul li 
+{
+  list-style: none;
+  padding: 10px 0; 
+  border-top: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+}
+
+
+.action .menu ul li img 
+{
+  max-width: 20px !important; 
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.action .menu ul li:hover img
+{
+  opacity: 1;
+}
+
+.action .menu ul li a 
+{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.action .menu ul li:hover a
+{
+  color: #fa5d02;
+} 
